@@ -8,20 +8,20 @@ function init() {
 
 let i = 0
   
-  function onKeyDownHandler(e) {
-    const key = parseInt(e.detail || e.which)
+function onKeyDownHandler(e) {
+  const key = parseInt(e.detail || e.which)
+  
+  if (key === code[i]) {
+    i++
+    console.log(e.detail + ' ' + e.which)
     
-    if (key === code[i]) {
-      i++
-      console.log(e.detail + ' ' + e.which)
-      
-      if (i === code.length) {
-        alert('congrats, you entered the code')
-        i = 0 
-      }
-    } else {
-      i = 0
+    if (i === code.length) {
+      alert('congrats, you entered the code')
+      i = 0 
     }
+  } else {
+    i = 0
   }
+}
 
 init()
