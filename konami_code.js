@@ -18,8 +18,6 @@ function init() {
       i = 0
     }
   }
-  
-document.addEventListener('keydown', onKeyDownHandler)
 }
 
 init()
