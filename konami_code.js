@@ -5,20 +5,20 @@ function init() {
   document.addEventListener('keydown', onKeyDownHandler)
   let i = 0
   
-function onKeyDownHandler(e) {
-  const key = parseInt(e.detail || e.which)
-  
-  if (key === code[i]) {
-    i++
+  function onKeyDownHandler(e) {
+    const key = parseInt(e.detail || e.which)
     
-    if (i === code.length) {
-      alert('congrats, you entered the code')
-      i = 0 
+    if (key === code[i]) {
+      i++
+      
+      if (i === code.length) {
+        alert('congrats, you entered the code')
+        i = 0 
+      }
+    } else {
+      i = 0
     }
-  } else {
-    i = 0
   }
-}
   
 }
 
